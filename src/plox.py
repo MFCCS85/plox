@@ -15,7 +15,6 @@ class Plox:
             self.run_prompt()
 
     def run_file(self, path: str) -> None:
-        src = ""
         with open(path, "r") as file:
             src = file.read()
         self.run(src)
@@ -28,7 +27,7 @@ class Plox:
                 if line.strip().lower() in ("exit", "quit"):
                     break
                 self.run(line)
-                self.had_error = True
+                self.had_error = False
             except EOFError:
                 print()
                 break
