@@ -37,7 +37,7 @@ class Plox:
         from scanner import Scanner
 
         scanner = Scanner(source, self)
-        print(scanner.scan_tokens())
+        scanner.scan_tokens()
 
     def error(self, line: int, message: str) -> None:
         self.report(line, "", message)
