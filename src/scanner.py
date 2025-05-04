@@ -178,11 +178,11 @@ class Scanner:
         self.add_token(token_type)
 
     def is_alpha(self, char: str) -> bool:
-        char = ord(char)
+        _char = ord(char)
         return (
-            (char >= ord("a") and char <= ord("z"))
-            or (char >= ord("A") and char <= ord("Z"))
-            or (char == ord("_"))
+            (_char >= ord("a") and _char <= ord("z"))
+            or (_char >= ord("A") and _char <= ord("Z"))
+            or (_char == ord("_"))
         )
 
     def is_alpha_numeric(self, char: str) -> bool:
